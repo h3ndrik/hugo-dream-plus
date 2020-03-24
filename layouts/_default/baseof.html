@@ -7,6 +7,10 @@
 		{{ partial "init_head.html" . }}
 	</head>
 
+	{{ if .HasShortcode "gallery" }}
+	{{ partial "load-photoswipe.html" . }}
+	{{ end }}
+
 	<body>
 		{{ partial "background.html" . }}
 		{{ partial "sidebar.html" . }}
