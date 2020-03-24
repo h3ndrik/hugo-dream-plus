@@ -21,6 +21,7 @@
 	<p class="desc">{{ $authorDesc }}</p>
 </div>
 
+{{ if $.Site.Params.features.socialButtons }}
 {{/*Social buttons*/}}
 <section class="buttons row box">
 	<div class="facebook none flexbox" href="#" onclick="window.open(
@@ -33,3 +34,4 @@
 		<button class="ui twitter button"><i class="twitter icon"></i>Tweet</button>
 	</div>
 </section>
+{{ end }}
