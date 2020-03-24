@@ -388,7 +388,7 @@ ul > li {
 
 .post-content img:not(.emoji):not(>gallery) {
   position: relative;
-  max-width: 80%;
+  max-width: 100%;
   display: block;
 }
 
@@ -753,7 +753,7 @@ p > img:not(.emoji), li > img {
 
 #tag-category .dream-categories {
   overflow-x: hidden;
-  max-height: 9em;
+  max-height: 38em;
 }
 /*Card settings*/
 .blog-card {
@@ -912,7 +912,7 @@ p > img:not(.emoji), li > img {
 
 .color-overlay {
   position: absolute;
-  background: rgba(0, 0, 0,0.4);
+  background: rgba(0, 0, 0,0.2);
   height: 100%;
   width: 100%;
   z-index: 1;
@@ -925,7 +925,7 @@ p > img:not(.emoji), li > img {
 }
 
 .blog-card:hover .color-overlay {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .license.statement {
