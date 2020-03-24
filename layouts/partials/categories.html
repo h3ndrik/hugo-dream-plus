@@ -1,12 +1,12 @@
 {{ range $name, $taxonomy := $.Site.Taxonomies.categories }}
 	{{/*Category title*/}}
-	<div class="title">
+	<div class="title{{ if eq $name $.Title }} active{{ end }}">
 		<i class="dropdown icon"></i>
 		<a class="link" href="{{- "/categories/" | relLangURL -}}{{- $name | urlize -}}">{{- $name -}}</a>
 	</div>
 
 	{{/*Category articles*/}}
-	<div class="content">
+	<div class="content{{ if eq $name $.Title }} active{{ end }}">
 		{{ range $taxonomy.Pages }}
 			<a class="item" href="{{ .Permalink }}">
 				<div>
