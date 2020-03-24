@@ -14,7 +14,7 @@
 		{{/*Cards*/}}
 		<div class="fifteen wide mobile fifteen wide tablet eleven wide computer column post-list">
 			<div class="cards row box">
-				{{ range .Paginator.Pages }}
+				{{ range where .Paginator.Pages "Params.hidden" "ne" "true" }}
 					{{ .Render "card" }}
 				{{ end }}
 			</div>
