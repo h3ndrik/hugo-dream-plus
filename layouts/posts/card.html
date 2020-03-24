@@ -19,10 +19,11 @@
 {{ $cover := $.Scratch.Get "cover" }}
 
 <article class="blog-card none flexbox">
+  <a class="title" href="{{ .Permalink }}">
 	{{/*Card*/}}
 	<img class="image" src="{{ $cover }}"></img>
 	<div class="title-content twemoji">
-		<h3><a class="title" href={{ .Permalink }}>{{ .Title }}</a></h3>
+		<h3>{{ .Title }}</h3>
 		<div class="intro twemoji">
 			{{ if .Params.description }}
 				{{ .Params.description | emojify | markdownify }}
@@ -43,4 +44,5 @@
 		</ul>
 	</div>
 	<div class="color-overlay"></div>
+  </a>
 </article>
